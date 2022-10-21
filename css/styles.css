@@ -14,7 +14,7 @@
 }
 
 *::selection{
-    background:#ff3300;
+    background:rgb(235, 66, 57);
     color:#fff;
 }
 
@@ -26,7 +26,7 @@ html{
 .btn{
     height: 4rem;
     width: 14rem;
-    background: rgb(229, 72, 72);
+    background: rgb(235, 66, 57);
     color:#fff;
     font-size: 2rem;
     cursor: pointer;
@@ -50,7 +50,7 @@ html{
     font-size: 2rem;
     padding:1rem 6rem;
     color:#fff;
-    background: rgb(229, 72, 72);
+    background: rgb(0, 0, 0);
     border-top-right-radius: 3rem;
     display: inline-block;
 }
@@ -70,7 +70,7 @@ header .header-1 .logo{
 }
 
 header .header-1 .logo i{
-    color: rgb(229, 72, 72);
+    color: rgb(0, 0, 0);
 }
 
 header .header-1 .form-container form{
@@ -87,7 +87,7 @@ header .header-1 .form-container form #search{
 }
 
 header .header-1 .form-container form #search:focus{
-    border-color: rgb(229, 72, 72);;
+    border-color: rgb(235, 66, 57);;
 }
 
 header .header-1 .form-container form label{
@@ -97,16 +97,16 @@ header .header-1 .form-container form label{
     line-height: 4rem;
     font-size: 2rem;
     cursor: pointer;
-    background: rgb(229, 72, 72);
+    background: rgb(235, 66, 57);
     color:#fff;
 }
 
 header .header-1 .form-container form label:hover{
-    color:yellow;
+    color:red;
 }
 
 header .header-2{
-    background:rgb(229, 72, 72);
+    background:rgb(0, 0, 0);
 }
 
 header .header-2 .navbar ul{
@@ -127,7 +127,7 @@ header .header-2 .navbar ul li a{
 
 header .header-2 .navbar ul li a.active,
 header .header-2 .navbar ul li a:hover{
-    color:yellow;
+    color:red;
 }
 
 header .header-2 .icons a{
@@ -137,7 +137,7 @@ header .header-2 .icons a{
 }
 
 header .header-2 .icons a:hover{
-    color:yellow;
+    color:red;
 }
 
 header .header-2 #menu{
@@ -240,7 +240,7 @@ header .header-2.header-active{
 .arrival .box-container .box .info h3{
     padding:1rem;
     font-size: 2rem;
-    color:rgb(229, 72, 72);
+    color:rgb(235, 66, 57);
 }
 
 .arrival .box-container .box .info .subInfo{
@@ -298,12 +298,12 @@ header .header-2.header-active{
 }
 
 .arrival .box-container .box .overlay a:hover{
-    color:rgb(229, 72, 72);
+    color:rgb(235, 66, 57);
 }
 
 .feature{
     min-height: 100vh;
-    background:linear-gradient(165deg, #fff 50%, rgb(229, 72, 72) 50.1%);
+    background:linear-gradient(165deg, #fff 50%, rgb(0, 0, 0) 50.1%);
     padding-bottom: 2rem;
 }
 
@@ -347,7 +347,7 @@ header .header-2.header-active{
 
 .feature .row .image-container .small-image img.image-active,
 .feature .row .image-container .small-image img:hover{
-    border:.2rem solid rgb(229, 72, 72);
+    border:.2rem solid rgb(235, 66, 57);
 }
 
 .feature .row .content{
@@ -356,7 +356,7 @@ header .header-2.header-active{
 
 .feature .row .content h3{
     font-size: 4rem;
-    color:rgb(229, 72, 72);
+    color:rgb(235, 66, 57);
 }
 
 .feature .row .content .stars i{
@@ -456,7 +456,7 @@ header .header-2.header-active{
 
 .gallery .image-container .box .info h3{
     font-size: 2rem;
-    color:rgb(229, 72, 72);
+    color:rgb(235, 66, 57);
     padding:1rem;
 }
 
@@ -539,11 +539,11 @@ header .header-2.header-active{
     padding:1rem;
     margin:1rem;
     text-align: center;
-    border:.2rem solid rgb(229, 72, 72);
+    border:.2rem solid rgb(235, 66, 57);
 }
 
 .deal .icons-container .icons i{
-    color:rgb(229, 72, 72);
+    color:rgb(235, 66, 57);
     font-size: 4rem;
     padding:1rem 0;
 }
@@ -560,7 +560,7 @@ header .header-2.header-active{
 }
 
 .newsletter{
-    background:linear-gradient(rgb(229, 72, 72),rgb(229, 72, 72)), url(../images/deal1.jpg) no-repeat;
+    background:linear-gradient(rgb(0, 0, 0),rgb(0, 0, 0)), url(../images/deal1.jpg) no-repeat;
     background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
@@ -624,7 +624,7 @@ header .header-2.header-active{
 }
 
 .footer .box-container .box i{
-    color:rgb(229, 72, 72);
+    color:rgb(235, 66, 57);
 }
 
 .footer .box-container .box p{
@@ -635,7 +635,7 @@ header .header-2.header-active{
 
 .footer .box-container .box h3{
     font-size: 2.5rem;
-    color:rgb(229, 72, 72);
+    color:rgb(235, 66, 57);
 }
 
 .footer .box-container .box:nth-child(2){
@@ -667,7 +667,7 @@ header .header-2.header-active{
 }
 
 .footer .credit span{
-    color:rgb(229, 72, 72);
+    color:rgb(235, 66, 57);
 }
 
 
@@ -714,7 +714,7 @@ header .header-2.header-active{
 
     header .header-2 .navbar ul{
         flex-flow: column;
-        background: linear-gradient(rgb(229, 72, 72), blueviolet);
+        background: linear-gradient(rgb(235, 66, 57), blueviolet);
         border:.2rem solid #fff;
         box-shadow: 0 .3rem .5rem #000;
         padding:4rem 0;
