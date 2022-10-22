@@ -1,7 +1,3 @@
-//------------------------------\\
-//---\\ BOII | DEVELOPMENT //---\\
-//------------------------------\\
-
 $(document).ready(function(){
     window.addEventListener('mousemove', function(e) {
 		cursor.style.left = e.clientX + "px"; 
