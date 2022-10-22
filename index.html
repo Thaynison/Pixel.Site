@@ -1,303 +1,115 @@
-<!DOCTYPE html>
-<html lang="PT">
+<!---------------------------->
+<!---- BOII | DEVELOPMENT ---->
+<!---------------------------->
 
-<head>
-  <meta charset="utf-8">
-  <title>
-    Cidade™ Pixel
-  </title>
-  <link rel="icon" 
-      type="image/jpg" 
-      href="img/20221013_135943815_iOS.jpg" />
-  <meta content=""
-        name="description">
-  <meta content=""
-        name="author">
-  <meta content=""
-        name="keywords">
-  <meta content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"
-        name="viewport">
-  <link href="css/bootstrap.min.css"
-        media="all"
-        rel="stylesheet"
-        type="text/css">
-  <link href="css/style-dark.css"
-        media="all"
-        rel="stylesheet"
-        type="text/css">
-  <link href="css/css.css"
-        rel="stylesheet">
-  <link href="css/fontawesome-all.min.css"
-        media="all"
-        rel="stylesheet"
-        type="text/css">
-  <link href="css/colors/yellow-2.css"
-        media="screen"
-        rel="stylesheet"
-        title="yellow-2"
-        type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900%7CDosis:200,300,400,500,600,700,800%7COswald:300,400,700%7CMontserrat:400,700"
-        rel="stylesheet"
-        type="text/css">
-</head>
+<!doctype html>
+<html>
+    <head>
+        <!-- META -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>PIXEL | LOADING SCREEN</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- ICONS -->
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="icon" type="image/jpg" href="img/logo.png" />
+        <!-- FONT -->
+        <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css">
+        <!-- JQUERY -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- SCRIPT -->
+        <script src="index.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <svg id="cursor" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+			<polygon style="fill:#4dcbc2;" points="284.197,328.561 346.079,469.645 297.825,490.812 249.521,512 187.628,370.917 82.26,471.745 82.49,0 429.74,319.313"/>
+			<polygon style="fill:#3da29b;" points="284.197,328.561 346.079,469.645 297.825,490.812 82.49,0 429.74,319.313"/>
+		</svg>
+        <div class="bg-crossfade">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>            
+        <div class="bg-overlay"></div>
+        <div class="header-container">
+            <h1 id="sv-name">Cidade™ Pixel</h1>   
+            <div class="logo-container">
+                <logo></logo>
+            </div>
+        </div>     
+        <div id="news-container" class="hidden">
+            <h1 class="content-header">NEWS</h1>
+            <div class="news-grid">
+                <div>
+                    <h1 class="content-header">Atualização 22/10/2022</h1>
+                    <br></br>
+                    <img src="img/news1.jpg" alt="1" class="news-img">
+                    <p class="content-text-news">1° - Sistema de Roubos</p>
+                    <p class="content-text-news">2° - Sistema de Corrida Ilegal</p>
+                    <p class="content-text-news">3° - Sistema de Tuning com remap</p>
 
-<body>
-<!--  <div class="film-grain"></div> -->
-  <div id="preloader">
-    <div id="preloader-status">
-      <div class="preloader-position preloader-effect">
-        <span></span>
-      </div>
-    </div>
-  </div>
+                    <!-- <h1 class="content-header">Atualização 22/10/2022</h1>
+                    <br></br>
+                    <img src="img/news1.jpg" alt="1" class="news-img">
+                    <p class="content-text-news">1° - Sistema de Roubos</p>
+                    <p class="content-text-news">2° - Sistema de Corrida Ilegal</p>
+                    <p class="content-text-news">3° - Sistema de Tuning com remap</p> -->
 
-  <div
-  class="hero-fullscreen hero-bg">
-    <div class="slide-YT hero-fullscreen">
-      <div class="slide bg-img-YT"></div>
-      <div id="videoContainment"></div><a class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=f1MAEDPcUC0', mute:true, showControls:false, quality:'default', opacity:1, containment:'#videoContainment', optimizeDisplay:true, loop:true, startAt:0, autoPlay:true, showYTLogo:false, addRaster:false, realfullscreen:true}" id="bgndVideo"></a>
-    </div>
-    <div class="preload-content"></div>
-  </div>
-  <div class="menu-trigger top-position"
-       id="menu">
-    <button class="lines-button minus menu-toggle"
-            id="main-menu-caller"
-            type="button"><span class="lines"></span></button>
-  </div>
-  <svg id="cursor"
-       width="30"
-       height="30">
-    <defs>
-      <linearGradient id="gradient"
-                      x1="0"
-                      y1="0"
-                      x2="1"
-                      y2="1">
-        <stop offset="0%"
-              stop-color="#f2c061"></stop>
-        <stop offset="100%"
-              stop-color="#da1b60"></stop>
-      </linearGradient>
-    </defs>
-    <circle r="13"
-            cx="15"
-            cy="15"
-            fill="none"></circle>
-    <line x1="0"
-          y1="0"
-          x2="30"
-          y2="30"></line>
-    <line x1="0"
-          y1="30"
-          x2="30"
-          y2="0"></line>
-  </svg>
-  <div id="ui-layer">
-    <div id="menu-wrapper">
-      <div id="main-menu">
-        <div class="menu-nav-wrapper">
-          <nav class="menu-nav">
-            <ul class="brackets">
-              <li class="menu">
-                <a class="menu-state active"
-                   href="#"
-                   id="fire-home">Inicio</a>
-              </li>
-              <li class="menu">
-                <a class="menu-state"
-                   href="#"
-                   id="fire-services">Regras</a>
-              </li>
-              <li class="menu">
-                <a class="menu-state"
-                   href="#"
-                   id="fire-contact">Informações</a>
-              </li>
-            </ul>
-          </nav>
+                </div>
+            </div>
         </div>
-
-      </div>
-    </div>
-  </div>
-  <div class="upper-page current"
-       id="home">
-    <div class="logo top-position"></div>
-
-    <div class="line-left left-position"></div>
-
-    <div class="line-right right-position">
-      <a href="https://discord.gg/bw3PS4vpkG">Copyright © Thaynison</a>
-    </div>
-
-    <div class="transparent-borders OFF"></div>
-    <div class="center-container-home">
-
-      <div class="center-block-home">
-
-        <div class="upper-content">
-
-          <div class="container sections">
-
-            <div class="row">
-
-              <div class="fin-wrapper introduction">
-
-                <div class="fin-slides-wrapper">
-                  <ul class="fin-slides">
-                    <li>
-                      <h3>
-                        Divirta-se
-                      </h3>
-                    </li>
-                    <li>
-                      <h3>
-                        Seja bem vindo!
-                      </h3>
-                    </li>
-                  </ul>
-                </div>               
-                <div class="fin-heading">
-                  <h1 class="fin-heading">
-                    Cidade Pixel
-                  </h1>
-                </div>                
-              </div>
-            </div>
-          </div>
+        <div id="rules-container" class="hidden">
+            <h1 class="content-header">REGRAS</h1>
+            <br></br>
+            <p class="content-text">⁍ DARK RP.</p>
+            <br></br>
+            <p class="content-text">⁍ É um estilo de Roleplay que é PROIBIDO de fazer. Atos de abuso a mulheres, estrupo, racismo, necrofilia, assédio, preconceito, pedofilia, entre outros.</p>
+            <br></br>
+            <p class="content-text">⁍ FLAMING.</p>
+            <br></br>
+            <p class="content-text">⁍ É o ato de inflamar alguma situação ou pessoa de forma negativa, incitando o ódio, acusações, ofensas, ameaças, etc.</p>
+            <br></br>
+            <p class="content-text">⁍ METAGAMING.</p>
+            <br></br>
+            <p class="content-text">⁍ Utilizar Informações descobertas por meios extenas e fora do roleplay para usar dentro do jogo para dar vantagens/beneficios ao seu porsonagem.</p>
+            <br></br>
+            <p class="content-text">⁍ ANTI RP.</p>
+            <br></br>
+            <p class="content-text">⁍ Sair fora do seu personagem. "Passivo de banimento.</p>
+            <br></br>
+            <!-- ADD MORE RULES HERE -->
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="lower-page"
-       id="services">
-
-    <div class="center-container">
-
-      <div class="center-block">
-
-        <div class="lower-content">
-
-          <div class="container sections">
-
-            <div class="row">
-              <h4>
-                //
-              </h4>
-              <h2>
-                regras <span class="get-behind">REGRAS PRINCIPAIS</span>
-              </h2>
-            </div>
-
-            <div class="row">
-
-              <div class="dividerOT"></div><!-- divider end -->
-            </div>
-
-            <div class="services-columns">
-
-              <div class="row">
-                <div class="col-md-6 services-padding mb40">
-                  <h5>
-                    <span class="awesome">DARK RP </span>
-                  </h5>
-                  <p>
-                    &middot; É um estilo de Roleplay que é PROIBIDO de fazer. Atos de abuso a mulheres, estrupo, racismo, necrofilia, assédio, preconceito, pedofilia, entre outros.
-                  </p>
-                </div>
-                <div class="col-md-6 services-padding border-left-services mb40">
-                  <h5>
-                    <span class="awesome">FLAMING</span>
-                  </h5>
-                  <p>
-                    &middot; É o ato de inflamar alguma situação ou pessoa de forma negativa, incitando o ódio, acusações, ofensas, ameaças, etc.
-
-                  </p>
-                </div>
+        <div id="staff-container" class="hidden">
+            <h1 class="content-header">STAFF</h1>
+            <div class="staff-grid">
+                <div><img src="img/thaynison.gif" alt="1" class="staff-img"><p class="content-text">Thaynison#2809</p></div>
+                <div><img src="img/renv.gif" alt="2" class="staff-img"><p class="content-text">Renv#2453</p></div>
+                <div><img src="img/musa.gif" alt="1" class="staff-img"><p class="content-text">🎀 Parceira 🎀 뮤즈 신#0457</p></div>
+                <!-- ADD MORE STAFF MEMBERS HERE -->
               </div>
-              <div class="row">
-                <div class="col-md-6 services-padding border-top-services mt40">
-                  <h5>
-                    <span class="awesome">METAGAMING</span>
-                  </h5>
-                  <p>
-                    &middot; Utilizar Informações descobertas por meios extenas e fora do roleplay para usar dentro do jogo para dar vantagens/beneficios ao seu porsonagem.
-                  </p>
-                </div>
-                <div class="col-md-6 services-padding border-left-services border-top-services mt40">
-                  <h5>
-                    <span class="awesome">ANTI RP</span>
-                  </h5>
-                  <p>
-                    &middot; Sair fora do seu personagem. "Passivo de banimento"
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="lower-page"
-       id="contact">
-
-    <div class="center-container">
-
-      <div class="center-block">
-
-        <div class="lower-content">
-
-          <div class="container sections">
-
-            <div class="row">
-              <h4>
-                //
-              </h4>
-              <h2>
-                Informações <span class="get-behind">Cidade™ Pixel</span>
-              </h2>
-            </div>
-
-            <div class="row">
-
-              <div class="dividerOT"></div>
-            </div>
-
-            
-            <div class="row">
-              <div class="col-md-4">
-                <span class="awesome-contact"><i class="fab fa-discord"></i></span>
-                <p>
-                  Thaynison#2809<br>
-                  <a> CEO - Developer</a>
-                </p>
-                <span class="awesome-contact"><i class="fab fa-discord"></i></span>
-                <p>
-                  Renv#2453<br>
-                  <a> COO - Developer</a>
-                </p>
-                <span class="awesome-contact"><i class="fa fa-shopping-bag"></i></span>
-                <p>
-                  Parceira<br>
-                  <a href="https://discord.gg/Pbnn4EAAkZ"> Musa™ Shop</a>
-                </p>
-                <span class="awesome-contact"><i class="fa fa-shopping-bag"></i></span>
-                <p>
-                  Loja<br>
-                  <a href="html/loja.html"> Cidade™ Pixel</a>
-                </p>
-
-  </div>
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"
-          type="text/javascript"></script>
-  <script src="js/plugins.js"
-          type="text/javascript"></script>
-  <script src="js/main.js"
-          type="text/javascript"></script>
-</body>
-
+        <audio controls autoplay>
+            <source src="./audio/music.mp3" id="track">
+        </audio>
+        <div id="trailer-container" class="hidden">
+            <h1 class="content-header">LOJA</h1>
+            <img src="img/news1.jpg" alt="1" class="news-img">
+            <button class="content-btn6"">
+                <a class="text-btn6" href="html/loja.html"> Site</a>
+            </button>
+            <!-- <video controls>
+                <source src="./video/1.mp4" type="video/mp4">
+            </video> -->
+        </div>
+        <button class="content-btn1">HOME</button>
+        <button class="content-btn2">NEWS</button>
+        <button class="content-btn3">REGRAS</button>
+        <button class="content-btn4">STAFF</button>
+        <button class="content-btn5"">LOJA</button>
+    </body>
 </html>
