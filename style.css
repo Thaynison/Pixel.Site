@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald");
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +15,7 @@
     background-repeat: round;
   }
   
-  img {
+  .img-body {
     width: 400px;
     animation: float 3s ease-in-out infinite;
   }
@@ -35,4 +36,27 @@
     width: 100vw;
     height: 100vh;
     object-fit: cover;
+}
+
+.info {
+  width: 500px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: absolute;
+  z-index: 2;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Oswald", sans-serif;
+  text-shadow: -1px 2px 8px rgba(164, 121, 28, 0.58);
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 200;
+  color: #ffffff;
+  letter-spacing: 0.2em;
+}
+
+.img-fooster{
+  width: 36px;
 }
