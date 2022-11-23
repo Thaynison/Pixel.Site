@@ -4,6 +4,10 @@
     padding: 0;
   }
   
+  .video{
+    /* filter: blur(6px); */
+  }
+
   body {
     height: 100vh;
     display: flex;
